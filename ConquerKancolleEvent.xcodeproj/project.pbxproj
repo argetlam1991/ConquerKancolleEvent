@@ -10,11 +10,12 @@
 		29DD130FE9584451200469D6 /* libPods-ConquerKancolleEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */; };
 		484BA1341F4532FC00C70AA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1331F4532FC00C70AA3 /* main.m */; };
 		484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1361F4532FC00C70AA3 /* AppDelegate.m */; };
-		484BA13A1F4532FC00C70AA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1391F4532FC00C70AA3 /* ViewController.m */; };
 		484BA13D1F4532FC00C70AA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484BA13B1F4532FC00C70AA3 /* Main.storyboard */; };
 		484BA13F1F4532FC00C70AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484BA13E1F4532FC00C70AA3 /* Assets.xcassets */; };
 		484BA1421F4532FC00C70AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484BA1401F4532FC00C70AA3 /* LaunchScreen.storyboard */; };
 		484BA14A1F45350F00C70AA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */; };
+		484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA14C1F4538EA00C70AA3 /* SignInViewController.m */; };
+		484BA1501F453B1000C70AA3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA14F1F453B1000C70AA3 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +23,15 @@
 		484BA1331F4532FC00C70AA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		484BA1351F4532FC00C70AA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		484BA1361F4532FC00C70AA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		484BA1381F4532FC00C70AA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		484BA1391F4532FC00C70AA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		484BA13C1F4532FC00C70AA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		484BA13E1F4532FC00C70AA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484BA1411F4532FC00C70AA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484BA1431F4532FC00C70AA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		484BA14B1F4538EA00C70AA3 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		484BA14C1F4538EA00C70AA3 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		484BA14E1F453B1000C70AA3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		484BA14F1F453B1000C70AA3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConquerKancolleEvent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.release.xcconfig"; sourceTree = "<group>"; };
 		F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,9 +73,11 @@
 			children = (
 				484BA1351F4532FC00C70AA3 /* AppDelegate.h */,
 				484BA1361F4532FC00C70AA3 /* AppDelegate.m */,
-				484BA1381F4532FC00C70AA3 /* ViewController.h */,
-				484BA1391F4532FC00C70AA3 /* ViewController.m */,
 				484BA13B1F4532FC00C70AA3 /* Main.storyboard */,
+				484BA14E1F453B1000C70AA3 /* MainViewController.h */,
+				484BA14F1F453B1000C70AA3 /* MainViewController.m */,
+				484BA14B1F4538EA00C70AA3 /* SignInViewController.h */,
+				484BA14C1F4538EA00C70AA3 /* SignInViewController.m */,
 				484BA13E1F4532FC00C70AA3 /* Assets.xcassets */,
 				484BA1401F4532FC00C70AA3 /* LaunchScreen.storyboard */,
 				484BA1431F4532FC00C70AA3 /* Info.plist */,
@@ -230,9 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484BA13A1F4532FC00C70AA3 /* ViewController.m in Sources */,
 				484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */,
+				484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */,
 				484BA1341F4532FC00C70AA3 /* main.m in Sources */,
+				484BA1501F453B1000C70AA3 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

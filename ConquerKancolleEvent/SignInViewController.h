@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SignInViewController.h
 //  ConquerKancolleEvent
 //
 //  Created by Gu Han on 8/16/17.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Firebase;
+@import GoogleSignIn;
 
-@interface ViewController : UIViewController
-
+@interface SignInViewController : UIViewController <GIDSignInUIDelegate>
 
 @end
-
