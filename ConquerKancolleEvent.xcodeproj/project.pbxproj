@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29DD130FE9584451200469D6 /* libPods-ConquerKancolleEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */; };
 		484BA1341F4532FC00C70AA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1331F4532FC00C70AA3 /* main.m */; };
 		484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1361F4532FC00C70AA3 /* AppDelegate.m */; };
 		484BA13A1F4532FC00C70AA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1391F4532FC00C70AA3 /* ViewController.m */; };
 		484BA13D1F4532FC00C70AA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484BA13B1F4532FC00C70AA3 /* Main.storyboard */; };
 		484BA13F1F4532FC00C70AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484BA13E1F4532FC00C70AA3 /* Assets.xcassets */; };
 		484BA1421F4532FC00C70AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484BA1401F4532FC00C70AA3 /* LaunchScreen.storyboard */; };
+		484BA14A1F45350F00C70AA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		484BA13E1F4532FC00C70AA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484BA1411F4532FC00C70AA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484BA1431F4532FC00C70AA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConquerKancolleEvent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.release.xcconfig"; sourceTree = "<group>"; };
+		F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29DD130FE9584451200469D6 /* libPods-ConquerKancolleEvent.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +49,11 @@
 		484BA1261F4532FC00C70AA3 = {
 			isa = PBXGroup;
 			children = (
+				484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */,
 				484BA1311F4532FC00C70AA3 /* ConquerKancolleEvent */,
 				484BA1301F4532FC00C70AA3 /* Products */,
+				5BC7B66592DA3DEBACCF8626 /* Pods */,
+				711548660D2479C5881AC7EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +89,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5BC7B66592DA3DEBACCF8626 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */,
+				A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		711548660D2479C5881AC7EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 484BA1461F4532FC00C70AA3 /* Build configuration list for PBXNativeTarget "ConquerKancolleEvent" */;
 			buildPhases = (
+				6201CC713F007DC4CAC8C094 /* [CP] Check Pods Manifest.lock */,
 				484BA12B1F4532FC00C70AA3 /* Sources */,
 				484BA12C1F4532FC00C70AA3 /* Frameworks */,
 				484BA12D1F4532FC00C70AA3 /* Resources */,
+				01BABCC0D837952ACEEED0BA /* [CP] Embed Pods Frameworks */,
+				812AECF582453C7FF0BC836B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -139,12 +169,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				484BA1421F4532FC00C70AA3 /* LaunchScreen.storyboard in Resources */,
+				484BA14A1F45350F00C70AA3 /* GoogleService-Info.plist in Resources */,
 				484BA13F1F4532FC00C70AA3 /* Assets.xcassets in Resources */,
 				484BA13D1F4532FC00C70AA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01BABCC0D837952ACEEED0BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6201CC713F007DC4CAC8C094 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		812AECF582453C7FF0BC836B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		484BA12B1F4532FC00C70AA3 /* Sources */ = {
@@ -273,6 +352,7 @@
 		};
 		484BA1471F4532FC00C70AA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H69H7F76LV;
@@ -285,6 +365,7 @@
 		};
 		484BA1481F4532FC00C70AA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H69H7F76LV;
@@ -314,6 +395,7 @@
 				484BA1481F4532FC00C70AA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
