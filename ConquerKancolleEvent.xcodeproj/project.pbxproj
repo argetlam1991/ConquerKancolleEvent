@@ -15,7 +15,10 @@
 		484BA1421F4532FC00C70AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484BA1401F4532FC00C70AA3 /* LaunchScreen.storyboard */; };
 		484BA14A1F45350F00C70AA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */; };
 		484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA14C1F4538EA00C70AA3 /* SignInViewController.m */; };
-		484BA1501F453B1000C70AA3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA14F1F453B1000C70AA3 /* MainViewController.m */; };
+		484BA1561F4A4EFF00C70AA3 /* GuidesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1551F4A4EFF00C70AA3 /* GuidesTableViewCell.m */; };
+		484BA15C1F4A539500C70AA3 /* GuidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA15B1F4A539500C70AA3 /* GuidesViewController.m */; };
+		484BA15F1F4A6ED000C70AA3 /* GudieEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA15E1F4A6ED000C70AA3 /* GudieEditorViewController.m */; };
+		484BA1621F4A713F00C70AA3 /* ShipTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1611F4A713F00C70AA3 /* ShipTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +33,14 @@
 		484BA1491F45350F00C70AA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		484BA14B1F4538EA00C70AA3 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		484BA14C1F4538EA00C70AA3 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		484BA14E1F453B1000C70AA3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		484BA14F1F453B1000C70AA3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		484BA1541F4A4EFF00C70AA3 /* GuidesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidesTableViewCell.h; sourceTree = "<group>"; };
+		484BA1551F4A4EFF00C70AA3 /* GuidesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidesTableViewCell.m; sourceTree = "<group>"; };
+		484BA15A1F4A539500C70AA3 /* GuidesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidesViewController.h; sourceTree = "<group>"; };
+		484BA15B1F4A539500C70AA3 /* GuidesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidesViewController.m; sourceTree = "<group>"; };
+		484BA15D1F4A6ED000C70AA3 /* GudieEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GudieEditorViewController.h; sourceTree = "<group>"; };
+		484BA15E1F4A6ED000C70AA3 /* GudieEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GudieEditorViewController.m; sourceTree = "<group>"; };
+		484BA1601F4A713F00C70AA3 /* ShipTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipTableViewCell.h; sourceTree = "<group>"; };
+		484BA1611F4A713F00C70AA3 /* ShipTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipTableViewCell.m; sourceTree = "<group>"; };
 		71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConquerKancolleEvent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.release.xcconfig"; sourceTree = "<group>"; };
 		F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,8 +83,14 @@
 				484BA1351F4532FC00C70AA3 /* AppDelegate.h */,
 				484BA1361F4532FC00C70AA3 /* AppDelegate.m */,
 				484BA13B1F4532FC00C70AA3 /* Main.storyboard */,
-				484BA14E1F453B1000C70AA3 /* MainViewController.h */,
-				484BA14F1F453B1000C70AA3 /* MainViewController.m */,
+				484BA1601F4A713F00C70AA3 /* ShipTableViewCell.h */,
+				484BA1611F4A713F00C70AA3 /* ShipTableViewCell.m */,
+				484BA15D1F4A6ED000C70AA3 /* GudieEditorViewController.h */,
+				484BA15E1F4A6ED000C70AA3 /* GudieEditorViewController.m */,
+				484BA1541F4A4EFF00C70AA3 /* GuidesTableViewCell.h */,
+				484BA15A1F4A539500C70AA3 /* GuidesViewController.h */,
+				484BA15B1F4A539500C70AA3 /* GuidesViewController.m */,
+				484BA1551F4A4EFF00C70AA3 /* GuidesTableViewCell.m */,
 				484BA14B1F4538EA00C70AA3 /* SignInViewController.h */,
 				484BA14C1F4538EA00C70AA3 /* SignInViewController.m */,
 				484BA13E1F4532FC00C70AA3 /* Assets.xcassets */,
@@ -235,10 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484BA15F1F4A6ED000C70AA3 /* GudieEditorViewController.m in Sources */,
+				484BA15C1F4A539500C70AA3 /* GuidesViewController.m in Sources */,
 				484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */,
 				484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */,
+				484BA1561F4A4EFF00C70AA3 /* GuidesTableViewCell.m in Sources */,
+				484BA1621F4A713F00C70AA3 /* ShipTableViewCell.m in Sources */,
 				484BA1341F4532FC00C70AA3 /* main.m in Sources */,
-				484BA1501F453B1000C70AA3 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
