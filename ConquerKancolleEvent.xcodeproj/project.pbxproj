@@ -19,6 +19,8 @@
 		484BA15C1F4A539500C70AA3 /* GuidesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA15B1F4A539500C70AA3 /* GuidesViewController.m */; };
 		484BA15F1F4A6ED000C70AA3 /* GudieEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA15E1F4A6ED000C70AA3 /* GudieEditorViewController.m */; };
 		484BA1621F4A713F00C70AA3 /* ShipTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1611F4A713F00C70AA3 /* ShipTableViewCell.m */; };
+		484BA1651F4FD32100C70AA3 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1641F4FD32100C70AA3 /* Ship.m */; };
+		484BA16A1F4FD8CC00C70AA3 /* ShipEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1691F4FD8CC00C70AA3 /* ShipEditorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,11 @@
 		484BA15E1F4A6ED000C70AA3 /* GudieEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GudieEditorViewController.m; sourceTree = "<group>"; };
 		484BA1601F4A713F00C70AA3 /* ShipTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipTableViewCell.h; sourceTree = "<group>"; };
 		484BA1611F4A713F00C70AA3 /* ShipTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipTableViewCell.m; sourceTree = "<group>"; };
+		484BA1631F4FD32100C70AA3 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ship.h; path = ConquerKancolleEvent/Ship.h; sourceTree = "<group>"; };
+		484BA1641F4FD32100C70AA3 /* Ship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ship.m; path = ConquerKancolleEvent/Ship.m; sourceTree = "<group>"; };
+		484BA1671F4FD83100C70AA3 /* ShipHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipHandler.h; sourceTree = "<group>"; };
+		484BA1681F4FD8CC00C70AA3 /* ShipEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipEditorViewController.h; sourceTree = "<group>"; };
+		484BA1691F4FD8CC00C70AA3 /* ShipEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipEditorViewController.m; sourceTree = "<group>"; };
 		71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConquerKancolleEvent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.release.xcconfig"; sourceTree = "<group>"; };
 		F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,17 +87,20 @@
 		484BA1311F4532FC00C70AA3 /* ConquerKancolleEvent */ = {
 			isa = PBXGroup;
 			children = (
+				484BA1661F4FD32D00C70AA3 /* model */,
 				484BA1351F4532FC00C70AA3 /* AppDelegate.h */,
 				484BA1361F4532FC00C70AA3 /* AppDelegate.m */,
 				484BA13B1F4532FC00C70AA3 /* Main.storyboard */,
+				484BA1681F4FD8CC00C70AA3 /* ShipEditorViewController.h */,
+				484BA1691F4FD8CC00C70AA3 /* ShipEditorViewController.m */,
 				484BA1601F4A713F00C70AA3 /* ShipTableViewCell.h */,
 				484BA1611F4A713F00C70AA3 /* ShipTableViewCell.m */,
 				484BA15D1F4A6ED000C70AA3 /* GudieEditorViewController.h */,
 				484BA15E1F4A6ED000C70AA3 /* GudieEditorViewController.m */,
 				484BA1541F4A4EFF00C70AA3 /* GuidesTableViewCell.h */,
+				484BA1551F4A4EFF00C70AA3 /* GuidesTableViewCell.m */,
 				484BA15A1F4A539500C70AA3 /* GuidesViewController.h */,
 				484BA15B1F4A539500C70AA3 /* GuidesViewController.m */,
-				484BA1551F4A4EFF00C70AA3 /* GuidesTableViewCell.m */,
 				484BA14B1F4538EA00C70AA3 /* SignInViewController.h */,
 				484BA14C1F4538EA00C70AA3 /* SignInViewController.m */,
 				484BA13E1F4532FC00C70AA3 /* Assets.xcassets */,
@@ -107,6 +117,17 @@
 				484BA1331F4532FC00C70AA3 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		484BA1661F4FD32D00C70AA3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				484BA1631F4FD32100C70AA3 /* Ship.h */,
+				484BA1641F4FD32100C70AA3 /* Ship.m */,
+				484BA1671F4FD83100C70AA3 /* ShipHandler.h */,
+			);
+			name = model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5BC7B66592DA3DEBACCF8626 /* Pods */ = {
@@ -255,8 +276,10 @@
 				484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */,
 				484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */,
 				484BA1561F4A4EFF00C70AA3 /* GuidesTableViewCell.m in Sources */,
+				484BA1651F4FD32100C70AA3 /* Ship.m in Sources */,
 				484BA1621F4A713F00C70AA3 /* ShipTableViewCell.m in Sources */,
 				484BA1341F4532FC00C70AA3 /* main.m in Sources */,
+				484BA16A1F4FD8CC00C70AA3 /* ShipEditorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -243,6 +243,12 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="equipment1Label" destination="IcC-O7-2or" id="ZMd-Vb-Nlq"/>
+                                            <outlet property="equipment2Label" destination="2hW-fH-sxf" id="vSc-fq-Igy"/>
+                                            <outlet property="equipment3Label" destination="aTd-5E-cfK" id="pXh-Xu-XpK"/>
+                                            <outlet property="equipment4Label" destination="xtT-QM-1uX" id="why-7p-VXS"/>
+                                            <outlet property="equipment5Label" destination="vnx-93-12b" id="r3f-cK-rfZ"/>
+                                            <outlet property="shipNameLabel" destination="vIh-Zw-SdT" id="Mui-xC-fIK"/>
                                             <segue destination="1mS-n2-kTm" kind="show" id="Jjf-gS-TnR"/>
                                         </connections>
                                     </tableViewCell>
@@ -267,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="1528.8" y="697.60119940029995"/>
         </scene>
-        <!--View Controller-->
+        <!--Ship Editor View Controller-->
         <scene sceneID="xZm-FE-AfU">
             <objects>
-                <viewController id="1mS-n2-kTm" sceneMemberID="viewController">
+                <viewController id="1mS-n2-kTm" customClass="ShipEditorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eDe-lZ-Huh"/>
                         <viewControllerLayoutGuide type="bottom" id="n4i-HW-RiV"/>
@@ -324,6 +330,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="equipment1TextField" destination="pWY-46-gJQ" id="wzD-KA-M5g"/>
+                        <outlet property="equipment2TextField" destination="1AZ-aB-ZTR" id="TfB-39-b8y"/>
+                        <outlet property="equipment3TextField" destination="HWl-FB-Lho" id="o3q-0Y-BlT"/>
+                        <outlet property="equipment4TextField" destination="rN3-11-PpC" id="cDe-4H-EPI"/>
+                        <outlet property="equipment5TextField" destination="Thy-WD-vYk" id="poM-hI-FGT"/>
+                        <outlet property="shipNameTextField" destination="E67-Jo-0gk" id="sKX-IW-ZsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oae-Ia-nsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

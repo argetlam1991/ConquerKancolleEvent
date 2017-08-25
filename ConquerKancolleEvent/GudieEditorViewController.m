@@ -8,8 +8,10 @@
 
 #import "GudieEditorViewController.h"
 #import "ShipTableViewCell.h"
+#import "ShipHandler.h"
+#import "ShipEditorViewController.h"
 
-@interface GudieEditorViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface GudieEditorViewController () <UITableViewDelegate, UITableViewDataSource, ShipHandler>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -73,8 +75,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   ShipTableViewCell *cell = (ShipTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"ShipCellIdentifier" forIndexPath:indexPath];
   // Configure the cell...
+  cell.indexPath = indexPath;
   [cell updateView];
   return cell;
+}
+
+- (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath{
+  ShipTableViewCell *cell = (ShipTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+  cell.ship = ship;
+  [cell updateView];
 }
 
 
@@ -85,8 +94,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   // Get the new view controller using [segue destinationViewController].
   // Pass the selected object to the new view controller.
+   ShipEditorViewController *child = (ShipEditorViewController *)[segue destinationViewController];
 
-  
+  ShipTableViewCell *source = (ShipTableViewCell *)sender;
+  child.delegate = self;
+  [child receiveShip:source.ship AtIndexPath:source.indexPath];
 }
 
 
