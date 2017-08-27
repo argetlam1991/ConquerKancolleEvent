@@ -24,13 +24,21 @@
 @implementation ShipEditorViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view.
+  if (self.ship) {
+    self.shipNameTextField.text = self.ship.shipName;
+    self.equipment1TextField.text = self.ship.equipment1;
+    self.equipment2TextField.text = self.ship.equipment2;
+    self.equipment3TextField.text = self.ship.equipment3;
+    self.equipment4TextField.text = self.ship.equipment4;
+    self.equipment5TextField.text = self.ship.equipment5;
+  }
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -51,16 +59,18 @@
 - (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath{
   self.ship = ship;
   self.indexPath = indexPath;
+  
+  
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

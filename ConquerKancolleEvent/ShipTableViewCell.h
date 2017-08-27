@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Ship.h"
+#import "Guide.h"
 
 @interface ShipTableViewCell : UITableViewCell
 
@@ -22,4 +23,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *equipment5Label;
 
 - (void) updateView;
+- (void) receiveShip:(Ship *) ship;
 @end

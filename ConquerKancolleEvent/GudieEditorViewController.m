@@ -10,12 +10,14 @@
 #import "ShipTableViewCell.h"
 #import "ShipHandler.h"
 #import "ShipEditorViewController.h"
+#import "Guide.h"
 
 @interface GudieEditorViewController () <UITableViewDelegate, UITableViewDataSource, ShipHandler>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *fleetKindSegmentedControl;
+@property (strong, nonatomic) Guide *guide;
 
 @end
 
@@ -26,6 +28,9 @@
   // Do any additional setup after loading the view.
   self.titleTextField.text = @"2017夏活攻略";
   self.descriptionTextView.text = @"blablabla";
+  if (!self.guide) {
+    self.guide = [[Guide alloc] initWithEmptyFleet];
+  }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +39,8 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-  
+  self.guide.title = self.titleTextField.text;
+  self.guide.guideDescription = self.descriptionTextView.text;
 }
 
 
@@ -76,14 +82,23 @@
   ShipTableViewCell *cell = (ShipTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"ShipCellIdentifier" forIndexPath:indexPath];
   // Configure the cell...
   cell.indexPath = indexPath;
+  [cell receiveShip:[self.guide getShipAtIndex:indexPath.section * 6 + indexPath.row]];
   [cell updateView];
   return cell;
 }
 
 - (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath{
+  /*
   ShipTableViewCell *cell = (ShipTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
   cell.ship = ship;
   [cell updateView];
+   */
+  [self.guide setShip:ship AtIndex:indexPath.section * 6 +  indexPath.row];
+  [self.tableView reloadData];
+}
+
+- (void) receiveGuide:(Guide *)guide{
+  self.guide = guide;
 }
 
 

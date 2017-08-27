@@ -8,6 +8,7 @@
 
 #import "ShipTableViewCell.h"
 
+
 @implementation ShipTableViewCell
 
 - (void)awakeFromNib {
@@ -30,6 +31,10 @@
     self.equipment4Label.text = self.ship.equipment4;
     self.equipment5Label.text = self.ship.equipment5;
   }
+}
+
+- (void) receiveShip:(Ship *)ship {
+  self.ship = ship;
 }
 
 @end
