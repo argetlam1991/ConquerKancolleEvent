@@ -43,7 +43,7 @@
         <scene sceneID="fIB-vh-3Vz">
             <objects>
                 <navigationController id="Kjl-ZS-It0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="akQ-35-ijo">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="akQ-35-ijo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -142,7 +142,7 @@
         <!--攻略-->
         <scene sceneID="b8I-zi-ydR">
             <objects>
-                <viewController id="5Ur-Oq-b7f" customClass="GudieEditorViewController" sceneMemberID="viewController">
+                <viewController id="5Ur-Oq-b7f" customClass="GuideEditorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Isl-yg-47w"/>
                         <viewControllerLayoutGuide type="bottom" id="qOa-uc-6mK"/>

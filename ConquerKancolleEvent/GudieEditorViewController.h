@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Guides.h"
 
-@interface GudieEditorViewController : UIViewController
-
+@interface GuideEditorViewController : UIViewController
+- (void) receiveGuides:(Guides *) guides;
 @end

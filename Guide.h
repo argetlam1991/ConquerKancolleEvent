@@ -16,4 +16,5 @@
 - (Guide *) initWithEmptyFleet;
 - (void) setShip:(Ship *) ship AtIndex:(NSUInteger) index;
 - (Ship *) getShipAtIndex:(NSUInteger) index;
+- (NSDictionary *) convertToFirebaseValue;
 @end

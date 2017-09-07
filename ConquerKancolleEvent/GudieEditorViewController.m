@@ -11,17 +11,19 @@
 #import "ShipHandler.h"
 #import "ShipEditorViewController.h"
 #import "Guide.h"
+#import "Guides.h"
 
-@interface GudieEditorViewController () <UITableViewDelegate, UITableViewDataSource, ShipHandler>
+@interface GuideEditorViewController () <UITableViewDelegate, UITableViewDataSource, ShipHandler>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *fleetKindSegmentedControl;
 @property (strong, nonatomic) Guide *guide;
+@property (strong, nonatomic) Guides *guides;
 
 @end
 
-@implementation GudieEditorViewController
+@implementation GuideEditorViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -41,6 +43,7 @@
 - (void) viewWillDisappear:(BOOL)animated {
   self.guide.title = self.titleTextField.text;
   self.guide.guideDescription = self.descriptionTextView.text;
+  [self.guides addGuide:self.guide];
 }
 
 
@@ -97,8 +100,12 @@
   [self.tableView reloadData];
 }
 
-- (void) receiveGuide:(Guide *)guide{
+- (void) receiveGuide:(Guide *) guide{
   self.guide = guide;
+}
+
+- (void) receiveGuides:(Guides *) guides {
+  self.guides = guides;
 }
 
 

@@ -33,4 +33,16 @@
   }
 }
 
+- (NSDictionary *) convertToFirebaseValue {
+  NSMutableArray *fleetArray = [[NSMutableArray alloc] init];
+  for (Ship *ship in self.fleet) {
+    [fleetArray addObject:[ship convertToFirebaseValue]];
+  }
+  NSDictionary *value = @{@"title" : self.title,
+                          @"description": self.guideDescription,
+                          @"fleet": (NSArray *)[fleetArray copy],
+                          };
+  return value;
+}
+
 @end

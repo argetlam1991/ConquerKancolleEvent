@@ -22,6 +22,7 @@
 		484BA1651F4FD32100C70AA3 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1641F4FD32100C70AA3 /* Ship.m */; };
 		484BA16A1F4FD8CC00C70AA3 /* ShipEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1691F4FD8CC00C70AA3 /* ShipEditorViewController.m */; };
 		484BA16D1F535F0E00C70AA3 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA16C1F535F0E00C70AA3 /* Guide.m */; };
+		484BA1701F5F9E9900C70AA3 /* Guides.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA16F1F5F9E9900C70AA3 /* Guides.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		484BA1691F4FD8CC00C70AA3 /* ShipEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipEditorViewController.m; sourceTree = "<group>"; };
 		484BA16B1F535F0E00C70AA3 /* Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guide.h; sourceTree = "<group>"; };
 		484BA16C1F535F0E00C70AA3 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
+		484BA16E1F5F9E9900C70AA3 /* Guides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guides.h; sourceTree = "<group>"; };
+		484BA16F1F5F9E9900C70AA3 /* Guides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guides.m; sourceTree = "<group>"; };
 		71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConquerKancolleEvent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.release.xcconfig"; sourceTree = "<group>"; };
 		F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				484BA1671F4FD83100C70AA3 /* ShipHandler.h */,
 				484BA16B1F535F0E00C70AA3 /* Guide.h */,
 				484BA16C1F535F0E00C70AA3 /* Guide.m */,
+				484BA16E1F5F9E9900C70AA3 /* Guides.h */,
+				484BA16F1F5F9E9900C70AA3 /* Guides.m */,
 			);
 			name = model;
 			path = ..;
@@ -281,6 +286,7 @@
 				484BA16D1F535F0E00C70AA3 /* Guide.m in Sources */,
 				484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */,
 				484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */,
+				484BA1701F5F9E9900C70AA3 /* Guides.m in Sources */,
 				484BA1561F4A4EFF00C70AA3 /* GuidesTableViewCell.m in Sources */,
 				484BA1651F4FD32100C70AA3 /* Ship.m in Sources */,
 				484BA1621F4A713F00C70AA3 /* ShipTableViewCell.m in Sources */,

@@ -15,4 +15,6 @@
 @property (strong, nonatomic) NSString *equipment3;
 @property (strong, nonatomic) NSString *equipment4;
 @property (strong, nonatomic) NSString *equipment5;
+
+- (NSDictionary *)convertToFirebaseValue;
 @end
