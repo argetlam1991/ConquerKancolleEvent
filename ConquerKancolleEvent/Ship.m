@@ -10,6 +10,20 @@
 
 @implementation Ship
 
+- (Ship *)initWithFirebaseValue:(NSDictionary *)value {
+  self = [super init];
+  if (self) {
+    self.shipName = value[@"shipName"];
+    self.equipment1 = value[@"equipment1"];
+    self.equipment2 = value[@"equipment2"];
+    self.equipment3 = value[@"equipment3"];
+    self.equipment4 = value[@"equipment4"];
+    self.equipment5 = value[@"equipment5"];
+  }
+  return self;
+}
+
+
 - (NSDictionary *)convertToFirebaseValue {
   NSDictionary *value = @{@"shipName" : self.shipName,
                           @"equipment1": self.equipment1,

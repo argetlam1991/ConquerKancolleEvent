@@ -25,10 +25,14 @@
 
     // Configure the view for the selected state
 }
+- (void) receiveGuide:(Guide *)guide {
+  self.guide = guide;
+  [self updateView];
+}
 
 - (void) updateView {
-  self.titleLabel.text = @"2017 夏活攻略";
-  self.authorLabel.text = @"碧落天";
+  self.titleLabel.text = self.guide.title;
+  self.authorLabel.text = self.guide.authorName;
 }
 
 @end

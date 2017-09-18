@@ -28,11 +28,10 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
-  self.titleTextField.text = @"2017夏活攻略";
-  self.descriptionTextView.text = @"blablabla";
   if (!self.guide) {
     self.guide = [[Guide alloc] initWithEmptyFleet];
   }
+  [self updateView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,9 +40,12 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-  self.guide.title = self.titleTextField.text;
-  self.guide.guideDescription = self.descriptionTextView.text;
-  [self.guides addGuide:self.guide];
+  if (self.isMovingFromParentViewController) {
+    self.guide.title = self.titleTextField.text;
+    self.guide.guideDescription = self.descriptionTextView.text;
+    [self.guides addGuide:self.guide];
+
+  }
 }
 
 
@@ -92,9 +94,9 @@
 
 - (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath{
   /*
-  ShipTableViewCell *cell = (ShipTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-  cell.ship = ship;
-  [cell updateView];
+   ShipTableViewCell *cell = (ShipTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+   cell.ship = ship;
+   [cell updateView];
    */
   [self.guide setShip:ship AtIndex:indexPath.section * 6 +  indexPath.row];
   [self.tableView reloadData];
@@ -102,12 +104,20 @@
 
 - (void) receiveGuide:(Guide *) guide{
   self.guide = guide;
+  [self updateView];
 }
 
 - (void) receiveGuides:(Guides *) guides {
   self.guides = guides;
 }
 
+- (void) updateView {
+  if (self.guide) {
+    self.titleTextField.text = self.guide.title;
+    self.descriptionTextView.text = self.guide.guideDescription;
+    [self.tableView reloadData];
+  }
+}
 
 
 #pragma mark - Navigation
@@ -116,11 +126,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   // Get the new view controller using [segue destinationViewController].
   // Pass the selected object to the new view controller.
-   ShipEditorViewController *child = (ShipEditorViewController *)[segue destinationViewController];
-
-  ShipTableViewCell *source = (ShipTableViewCell *)sender;
-  child.delegate = self;
-  [child receiveShip:source.ship AtIndexPath:source.indexPath];
+  if([sender isMemberOfClass:[UIBarButtonItem class]]) {
+  }
+  else{
+    
+    ShipEditorViewController *child = (ShipEditorViewController *)[segue destinationViewController];
+    
+    ShipTableViewCell *source = (ShipTableViewCell *)sender;
+    child.delegate = self;
+    [child receiveShip:source.ship AtIndexPath:source.indexPath];
+  }
 }
 
 

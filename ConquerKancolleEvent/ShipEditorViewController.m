@@ -59,9 +59,8 @@
 - (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath{
   self.ship = ship;
   self.indexPath = indexPath;
-  
-  
 }
+
 
 /*
  #pragma mark - Navigation

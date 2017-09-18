@@ -7,12 +7,12 @@
 //
 
 #import "SignInViewController.h"
+@import Firebase;
 
 
 @interface SignInViewController ()
-
-@property(strong, nonatomic) FIRAuthStateDidChangeListenerHandle handle;
-@property (weak, nonatomic) IBOutlet GIDSignInButton *signInButton;
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -20,15 +20,19 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [GIDSignIn sharedInstance].uiDelegate = self;
-  [[GIDSignIn sharedInstance] signInSilently];
+}
+- (IBAction)loginTapped:(id)sender {
+  [[FIRAuth auth] signInWithEmail:self.emailTextField.text
+                         password:self.passwordTextField.text
+                       completion:^(FIRUser *user, NSError *error) {
+                         if (user) {
+                           [self performSegueWithIdentifier:@"signInToMain" sender:nil];
+                         }
+                       }];
   
-  self.handle = [[FIRAuth auth]
-                 addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
-                   if (user) {
-                     [self performSegueWithIdentifier:@"signInToMain" sender:nil];
-                   }
-                 }];
+}
+
+- (IBAction)RegisterTapped:(id)sender {
 }
 
 @end

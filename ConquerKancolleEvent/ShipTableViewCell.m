@@ -35,6 +35,7 @@
 
 - (void) receiveShip:(Ship *)ship {
   self.ship = ship;
+  [self updateView];
 }
 
 @end

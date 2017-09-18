@@ -11,4 +11,5 @@
 
 @interface GuideEditorViewController : UIViewController
 - (void) receiveGuides:(Guides *) guides;
+- (void) receiveGuide:(Guide *)guide;
 @end

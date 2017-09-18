@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Guide.h"
 
 @interface GuidesTableViewCell : UITableViewCell
+@property (strong, nonatomic) Guide *guide;
 
 - (void) updateView;
+- (void) receiveGuide:(Guide *)guide;
 @end
