@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29DD130FE9584451200469D6 /* libPods-ConquerKancolleEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */; };
+		4846853E1F7B496900DDFA0E /* ShipDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4846853D1F7B496900DDFA0E /* ShipDataViewController.m */; };
 		484BA1341F4532FC00C70AA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1331F4532FC00C70AA3 /* main.m */; };
 		484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1361F4532FC00C70AA3 /* AppDelegate.m */; };
 		484BA13D1F4532FC00C70AA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484BA13B1F4532FC00C70AA3 /* Main.storyboard */; };
@@ -25,9 +26,15 @@
 		484BA1701F5F9E9900C70AA3 /* Guides.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA16F1F5F9E9900C70AA3 /* Guides.m */; };
 		484BA1761F65D91900C70AA3 /* GuideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484BA1751F65D91900C70AA3 /* GuideTableViewController.m */; };
 		48A5C1931F6A29710018FB28 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A5C1921F6A29710018FB28 /* RegisterViewController.m */; };
+		48A5C1961F74C22B0018FB28 /* ShipData.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A5C1951F74C22B0018FB28 /* ShipData.m */; };
+		48A5C19D1F7703060018FB28 /* ShipDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A5C19C1F7703060018FB28 /* ShipDataTableViewController.m */; };
+		48A5C19F1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 48A5C19E1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json */; };
+		48A5C1A21F7709970018FB28 /* ShipDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A5C1A11F7709970018FB28 /* ShipDataTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4846853C1F7B496900DDFA0E /* ShipDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShipDataViewController.h; sourceTree = "<group>"; };
+		4846853D1F7B496900DDFA0E /* ShipDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShipDataViewController.m; sourceTree = "<group>"; };
 		484BA12F1F4532FC00C70AA3 /* ConquerKancolleEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConquerKancolleEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484BA1331F4532FC00C70AA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		484BA1351F4532FC00C70AA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +68,13 @@
 		484BA1751F65D91900C70AA3 /* GuideTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideTableViewController.m; sourceTree = "<group>"; };
 		48A5C1911F6A29710018FB28 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		48A5C1921F6A29710018FB28 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		48A5C1941F74C22B0018FB28 /* ShipData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipData.h; sourceTree = "<group>"; };
+		48A5C1951F74C22B0018FB28 /* ShipData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipData.m; sourceTree = "<group>"; };
+		48A5C19B1F7703060018FB28 /* ShipDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipDataTableViewController.h; sourceTree = "<group>"; };
+		48A5C19C1F7703060018FB28 /* ShipDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipDataTableViewController.m; sourceTree = "<group>"; };
+		48A5C19E1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "conquerkancolleevent-shipsData.json"; sourceTree = "<group>"; };
+		48A5C1A01F7709970018FB28 /* ShipDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipDataTableViewCell.h; sourceTree = "<group>"; };
+		48A5C1A11F7709970018FB28 /* ShipDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShipDataTableViewCell.m; sourceTree = "<group>"; };
 		71ADFACFFD1766A082A94B0C /* libPods-ConquerKancolleEvent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConquerKancolleEvent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A969C1430CC88CD4F8362517 /* Pods-ConquerKancolleEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.release.xcconfig"; sourceTree = "<group>"; };
 		F231061428B22FFD370E251D /* Pods-ConquerKancolleEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConquerKancolleEvent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConquerKancolleEvent/Pods-ConquerKancolleEvent.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +118,12 @@
 				484BA1351F4532FC00C70AA3 /* AppDelegate.h */,
 				484BA1361F4532FC00C70AA3 /* AppDelegate.m */,
 				484BA13B1F4532FC00C70AA3 /* Main.storyboard */,
+				4846853C1F7B496900DDFA0E /* ShipDataViewController.h */,
+				4846853D1F7B496900DDFA0E /* ShipDataViewController.m */,
+				48A5C1A01F7709970018FB28 /* ShipDataTableViewCell.h */,
+				48A5C1A11F7709970018FB28 /* ShipDataTableViewCell.m */,
+				48A5C19B1F7703060018FB28 /* ShipDataTableViewController.h */,
+				48A5C19C1F7703060018FB28 /* ShipDataTableViewController.m */,
 				48A5C1911F6A29710018FB28 /* RegisterViewController.h */,
 				48A5C1921F6A29710018FB28 /* RegisterViewController.m */,
 				484BA1741F65D91900C70AA3 /* GuideTableViewController.h */,
@@ -132,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				484BA1331F4532FC00C70AA3 /* main.m */,
+				48A5C19E1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -147,6 +168,8 @@
 				484BA16E1F5F9E9900C70AA3 /* Guides.h */,
 				484BA16F1F5F9E9900C70AA3 /* Guides.m */,
 				484BA1731F6493E400C70AA3 /* GuidesDelegate.h */,
+				48A5C1941F74C22B0018FB28 /* ShipData.h */,
+				48A5C1951F74C22B0018FB28 /* ShipData.m */,
 			);
 			name = model;
 			path = ..;
@@ -232,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				484BA1421F4532FC00C70AA3 /* LaunchScreen.storyboard in Resources */,
+				48A5C19F1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json in Resources */,
 				484BA14A1F45350F00C70AA3 /* GoogleService-Info.plist in Resources */,
 				484BA13F1F4532FC00C70AA3 /* Assets.xcassets in Resources */,
 				484BA13D1F4532FC00C70AA3 /* Main.storyboard in Resources */,
@@ -294,7 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				484BA15F1F4A6ED000C70AA3 /* GudieEditorViewController.m in Sources */,
+				48A5C1961F74C22B0018FB28 /* ShipData.m in Sources */,
 				484BA15C1F4A539500C70AA3 /* GuidesViewController.m in Sources */,
+				48A5C1A21F7709970018FB28 /* ShipDataTableViewCell.m in Sources */,
 				484BA16D1F535F0E00C70AA3 /* Guide.m in Sources */,
 				484BA1371F4532FC00C70AA3 /* AppDelegate.m in Sources */,
 				484BA14D1F4538EA00C70AA3 /* SignInViewController.m in Sources */,
@@ -305,7 +331,9 @@
 				48A5C1931F6A29710018FB28 /* RegisterViewController.m in Sources */,
 				484BA1621F4A713F00C70AA3 /* ShipTableViewCell.m in Sources */,
 				484BA1341F4532FC00C70AA3 /* main.m in Sources */,
+				48A5C19D1F7703060018FB28 /* ShipDataTableViewController.m in Sources */,
 				484BA16A1F4FD8CC00C70AA3 /* ShipEditorViewController.m in Sources */,
+				4846853E1F7B496900DDFA0E /* ShipDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

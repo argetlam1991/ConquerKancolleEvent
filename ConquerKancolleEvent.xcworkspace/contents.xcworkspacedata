@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ShipData.json">
+   </FileRef>
+   <FileRef
       location = "group:ConquerKancolleEvent.xcodeproj">
    </FileRef>
    <FileRef

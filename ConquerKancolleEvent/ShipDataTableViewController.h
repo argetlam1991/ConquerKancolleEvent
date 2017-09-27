@@ -1,18 +1,20 @@
 //
-//  ShipEditorViewController.h
+//  ShipDataTableViewController.h
 //  ConquerKancolleEvent
 //
-//  Created by Gu Han on 8/24/17.
+//  Created by Gu Han on 9/23/17.
 //  Copyright © 2017 Gu Han. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "ShipEditorViewController.h"
 #import "Ship.h"
 #import "ShipHandler.h"
 
-@interface ShipEditorViewController : UIViewController
+
+@interface ShipDataTableViewController : UITableViewController
 @property (weak, nonatomic) NSObject<ShipHandler> *delegate;
 
 - (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath;
-- (void) receiveShipData:(NSString *)shipData AndIdentify:(NSString *)identify;
+
 @end
