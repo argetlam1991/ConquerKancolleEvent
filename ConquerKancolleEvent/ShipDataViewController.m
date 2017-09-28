@@ -18,6 +18,9 @@ const NSUInteger kHeaderSectionTag = 10000;
 @property (assign) NSInteger expandedSectionHeaderNumber;
 @property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
 
+@property (nonatomic, strong) Ship *ship;
+@property (strong, nonatomic) NSIndexPath *indexPath;
+
 @end
 
 @implementation ShipDataViewController
@@ -31,6 +34,21 @@ const NSUInteger kHeaderSectionTag = 10000;
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+  ShipDataTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  self.ship.shipName = cell.shipName;
+  [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) viewWillDisappear: (BOOL)animated {
+  [self.delegate receiveShip:self.ship AtIndexPath:self.indexPath];
+}
+
+- (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath {
+  self.ship = ship;
+  self.indexPath = indexPath;
 }
 
 #pragma mark - Table view data source

@@ -7,7 +7,7 @@
 //
 
 #import "ShipEditorViewController.h"
-#import "ShipDataTableViewController.h"
+#import "ShipDataViewController.h"
 
 
 @interface ShipEditorViewController () <ShipHandler>
@@ -65,7 +65,7 @@
   // Get the new view controller using [segue destinationViewController].
   // Pass the selected object to the new view controller.
   
-  ShipDataTableViewController * dest = [segue destinationViewController];
+  ShipDataViewController * dest = [segue destinationViewController];
   dest.delegate = self;
   [dest receiveShip:self.ship AtIndexPath:self.indexPath];
   

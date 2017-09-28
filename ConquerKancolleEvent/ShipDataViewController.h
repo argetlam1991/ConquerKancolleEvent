@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ship.h"
+#import "ShipHandler.h"
 
 @interface ShipDataViewController : UIViewController
+@property (weak, nonatomic) NSObject<ShipHandler> *delegate;
+- (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nkb-hu-H1s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cTo-Xu-p1k">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -381,7 +381,7 @@
                     </view>
                     <connections>
                         <outlet property="shipNameButton" destination="8Aq-yH-HPs" id="f2o-7c-oaO"/>
-                        <segue destination="Nkb-hu-H1s" kind="show" id="sCl-g3-3pE"/>
+                        <segue destination="Nkb-hu-H1s" kind="show" identifier="shipEditorToShipSelect" id="sCl-g3-3pE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oae-Ia-nsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,7 +444,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JRp-OJ-IRR"/>
+        <segue reference="ZDj-Gk-Qq1"/>
         <segue reference="Fhz-aY-5a3"/>
     </inferredMetricsTieBreakers>
 </document>
