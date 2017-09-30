@@ -53,6 +53,7 @@
   [self updateView];
 }
 
+
 - (void) updateView {
   if (self.ship) {
     [self.shipNameButton setTitle:self.ship.shipName forState:UIControlStateNormal];

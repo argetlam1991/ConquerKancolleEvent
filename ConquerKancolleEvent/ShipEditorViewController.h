@@ -14,5 +14,5 @@
 @property (weak, nonatomic) NSObject<ShipHandler> *delegate;
 
 - (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath;
-- (void) receiveShipData:(NSString *)shipData AndIdentify:(NSString *)identify;
+
 @end

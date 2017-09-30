@@ -1,20 +1,21 @@
 //
-//  ShipDataViewController.m
+//  EquipmentDataViewController.m
 //  ConquerKancolleEvent
 //
-//  Created by Gu Han on 9/26/17.
+//  Created by Gu Han on 9/29/17.
 //  Copyright © 2017 Gu Han. All rights reserved.
 //
 
-#import "ShipDataViewController.h"
-#import "ShipData.h"
-#import "ShipDataTableViewCell.h"
+#import "EquipmentDataViewController.h"
+#import "EquipmentDataTableViewCell.h"
+#import "EquipmentData.h"
+#import "Ship.h"
 
-const NSUInteger kHeaderSectionTag = 10000;
+const NSUInteger lHeaderSectionTag = 10000;
 
-@interface ShipDataViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface EquipmentDataViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) ShipData *shipData;
+@property (strong, nonatomic) EquipmentData *equipmentData;
 @property (assign) NSInteger expandedSectionHeaderNumber;
 @property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
 
@@ -23,31 +24,16 @@ const NSUInteger kHeaderSectionTag = 10000;
 
 @end
 
-@implementation ShipDataViewController
+@implementation EquipmentDataViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.shipData = [[ShipData alloc] init];
+  self.equipmentData = [[EquipmentData alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
-}
-
-- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-  ShipDataTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  self.ship.shipName = cell.shipName;
-  [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void) viewWillDisappear: (BOOL)animated {
-  [self.delegate receiveShip:self.ship AtIndexPath:self.indexPath];
-}
-
-- (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath {
-  self.ship = ship;
-  self.indexPath = indexPath;
 }
 
 #pragma mark - Table view data source
@@ -57,28 +43,26 @@ const NSUInteger kHeaderSectionTag = 10000;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [self.shipData getShipKindsCount];
+  return [self.equipmentData getEquipmentKindsCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   if (self.expandedSectionHeaderNumber == section) {
-    return [self.shipData getShipDataCountWithKindIndex:section];
+    return [self.equipmentData getEquipmentDataCountWithKindIndex:section];
   } else {
     return 0;
   }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-  return [self.shipData getShipKindeAtIndex:section];
+  return [self.equipmentData getEquipmentKindeAtIndex:section];
 }
 
-
-//0,100,255,0.1
 -(void) tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
   UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
   header.contentView.backgroundColor = [UIColor colorWithRed:0.19 green:0.75 blue:0.82 alpha:1.0];
   header.textLabel.textColor = [UIColor whiteColor];
-  UIImageView *viewWithTag = [self.view viewWithTag:kHeaderSectionTag + section];
+  UIImageView *viewWithTag = [self.view viewWithTag:lHeaderSectionTag + section];
   if (viewWithTag) {
     [viewWithTag removeFromSuperview];
   }
@@ -87,7 +71,7 @@ const NSUInteger kHeaderSectionTag = 10000;
   CGSize headerFrame = self.view.frame.size;
   UIImageView *theImageView = [[UIImageView alloc] initWithFrame:CGRectMake(headerFrame.width - 32, 13, 18, 18)];
   theImageView.image = [UIImage imageNamed:@"Chevron-Dn-Wht"];
-  theImageView.tag = kHeaderSectionTag + section;
+  theImageView.tag = lHeaderSectionTag + section;
   [header addSubview:theImageView];
   
   // make headers touchable
@@ -97,12 +81,12 @@ const NSUInteger kHeaderSectionTag = 10000;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  ShipDataTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"shipDataCell" forIndexPath:indexPath];
+  EquipmentDataTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"equipmentDataCell" forIndexPath:indexPath];
   
   // Configure the cell...
-  NSString *shipKind = [self.shipData getShipKindeAtIndex:indexPath.section];
-  NSString *shipName = [self.shipData getShipDataAtIndex:indexPath.row withKind:shipKind];
-  cell.shipName = shipName;
+  NSString *equipmentKind = [self.equipmentData getEquipmentKindeAtIndex:indexPath.section];
+  NSString *equipmentName = [self.equipmentData getEquipmentDataAtIndex:indexPath.row withKind:equipmentKind];
+  cell.equipmentName = equipmentName;
   [cell updateView];
   return cell;
 }
@@ -110,7 +94,7 @@ const NSUInteger kHeaderSectionTag = 10000;
 - (void)sectionHeaderWasTouched:(UITapGestureRecognizer *)sender {
   UITableViewHeaderFooterView *headerView = (UITableViewHeaderFooterView *)sender.view;
   NSInteger section = headerView.tag;
-  UIImageView *eImageView = (UIImageView *)[headerView viewWithTag:kHeaderSectionTag + section];
+  UIImageView *eImageView = (UIImageView *)[headerView viewWithTag:lHeaderSectionTag + section];
   self.expandedSectionHeader = headerView;
   if (self.expandedSectionHeaderNumber == -1) {
     self.expandedSectionHeaderNumber = section;
@@ -120,7 +104,7 @@ const NSUInteger kHeaderSectionTag = 10000;
       [self tableViewCollapeSection:section withImage: eImageView];
       self.expandedSectionHeader = nil;
     } else {
-      UIImageView *cImageView  = (UIImageView *)[self.view viewWithTag:kHeaderSectionTag + self.expandedSectionHeaderNumber];
+      UIImageView *cImageView  = (UIImageView *)[self.view viewWithTag:lHeaderSectionTag + self.expandedSectionHeaderNumber];
       [self tableViewCollapeSection:self.expandedSectionHeaderNumber withImage: cImageView];
       [self tableViewExpandSection:section withImage: eImageView];
     }
@@ -128,7 +112,7 @@ const NSUInteger kHeaderSectionTag = 10000;
 }
 
 - (void)tableViewCollapeSection:(NSInteger)section withImage:(UIImageView *)imageView {
-  if ([self.shipData getShipDataCountWithKindIndex:section] == 0) {
+  if ([self.equipmentData getEquipmentDataCountWithKindIndex:section] == 0) {
     self.expandedSectionHeaderNumber = -1;
     return;
   } else {
@@ -136,7 +120,7 @@ const NSUInteger kHeaderSectionTag = 10000;
       imageView.transform = CGAffineTransformMakeRotation((180.0 * M_PI) / 180.0);
     }];
     NSMutableArray *arrayOfIndexPaths = [NSMutableArray array];
-    for (int i=0; i< [self.shipData getShipDataCountWithKindIndex:section]; i++) {
+    for (int i=0; i< [self.equipmentData getEquipmentDataCountWithKindIndex:section]; i++) {
       NSIndexPath *index = [NSIndexPath indexPathForRow:i inSection:section];
       [arrayOfIndexPaths addObject:index];
     }
@@ -148,7 +132,7 @@ const NSUInteger kHeaderSectionTag = 10000;
 }
 
 - (void)tableViewExpandSection:(NSInteger)section withImage:(UIImageView *)imageView {
-  if ([self.shipData getShipDataCountWithKindIndex:section] == 0) {
+  if ([self.equipmentData getEquipmentDataCountWithKindIndex:section] == 0) {
     self.expandedSectionHeaderNumber = -1;
     return;
   } else {
@@ -156,7 +140,7 @@ const NSUInteger kHeaderSectionTag = 10000;
       imageView.transform = CGAffineTransformMakeRotation((180.0 * M_PI) / 180.0);
     }];
     NSMutableArray *arrayOfIndexPaths = [NSMutableArray array];
-    for (int i=0; i< [self.shipData getShipDataCountWithKindIndex:section]; i++) {
+    for (int i=0; i< [self.equipmentData getEquipmentDataCountWithKindIndex:section]; i++) {
       NSIndexPath *index = [NSIndexPath indexPathForRow:i inSection:section];
       [arrayOfIndexPaths addObject:index];
     }
@@ -166,7 +150,6 @@ const NSUInteger kHeaderSectionTag = 10000;
     [self.tableView endUpdates];
   }
 }
-
 
 /*
  #pragma mark - Navigation

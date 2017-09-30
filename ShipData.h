@@ -6,9 +6,9 @@
 //  Copyright © 2017 Gu Han. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "DataModel.h"
 
-@interface ShipData : NSObject
+@interface ShipData : DataModel
 - (ShipData *)init;
 - (NSUInteger) getShipKindsCount;
 - (NSString *) getShipKindeAtIndex: (NSUInteger) index;
