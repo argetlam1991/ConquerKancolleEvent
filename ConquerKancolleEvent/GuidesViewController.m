@@ -33,6 +33,8 @@
   UITableViewController *tableViewController = [[UITableViewController alloc] init];
   tableViewController.tableView = self.tableView;
   
+  //[[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
+  
   //refreshControl
   self.isLoading = NO;
   self.refreshControl = [[UIRefreshControl alloc] init];
@@ -43,7 +45,7 @@
 }
 
 -(void)refreshTable {
-    [self.guides getGuides];
+  [self.guides getGuides];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,7 +90,7 @@
 
 -(void)scrollViewDidScroll: (UIScrollView*)scrollView
 {
-      NSLog(@"%f, %f, %f",  scrollView.contentOffset.y, scrollView.frame.size.height, scrollView.contentSize.height);
+  NSLog(@"%f, %f, %f",  scrollView.contentOffset.y, scrollView.frame.size.height, scrollView.contentSize.height);
   if (!self.isLoading && scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height)
   {
     self.isLoading = YES;
@@ -110,7 +112,7 @@
     [child receiveGuide:source.guide];
   }
   [child receiveGuides:self.guides];
-
+  
 }
 
 

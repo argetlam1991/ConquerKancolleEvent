@@ -12,22 +12,18 @@
 - (EquipmentData *)init {
   self = [super initWithDataFile:@"conquerkancolleevent-equipments"];
   return self;
-  
 }
 
 - (NSUInteger) getEquipmentKindsCount {
   return [self getDataKindsCount];
-  
 }
 
 - (NSString *) getEquipmentKindeAtIndex: (NSUInteger) index {
   return [self getDataKindeAtIndex:index];
-  
 }
 
 - (NSUInteger) getEquipmentDataCountWithKindIndex:(NSUInteger) index {
   return [self getDataCountWithKindIndex:index];
-  
 }
 
 - (NSString *) getEquipmentDataAtIndex:(NSUInteger) index withKind:(NSString *) equipmentKind {

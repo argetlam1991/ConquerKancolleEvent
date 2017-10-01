@@ -21,6 +21,7 @@ const NSUInteger lHeaderSectionTag = 10000;
 
 @property (nonatomic, strong) Ship *ship;
 @property (strong, nonatomic) NSIndexPath *indexPath;
+@property (strong, nonatomic) NSString *identify;
 
 @end
 
@@ -34,6 +35,34 @@ const NSUInteger lHeaderSectionTag = 10000;
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+  EquipmentDataTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+  if ([self.identify isEqualToString:@"equipment1"]) {
+    self.ship.equipment1 = cell.equipmentName;
+  } else if ([self.identify isEqualToString:@"equipment2"]) {
+    self.ship.equipment2 = cell.equipmentName;
+  } else if ([self.identify isEqualToString:@"equipment3"]) {
+    self.ship.equipment3 = cell.equipmentName;
+  } else if ([self.identify isEqualToString:@"equipment4"]) {
+    self.ship.equipment4 = cell.equipmentName;
+  } else if ([self.identify isEqualToString:@"equipment5"]) {
+    self.ship.equipment5 = cell.equipmentName;
+  }
+  [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) receiveShip:(Ship *)ship AtIndexPath:(NSIndexPath *)indexPath {
+  self.ship = ship;
+  self.indexPath = indexPath;
+}
+- (void) viewWillDisappear: (BOOL)animated {
+  [self.delegate receiveShip:self.ship AtIndexPath:self.indexPath];
+}
+
+- (void) receiveButtonIdentify:(NSString *)identify {
+  self.identify = identify;
 }
 
 #pragma mark - Table view data source

@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSString *equipment5;
 
 - (NSDictionary *)convertToFirebaseValue;
+- (Ship *)initWithShipName:(NSString *) shipName;
 - (Ship *)initWithFirebaseValue:(NSDictionary *)value;
 @end

@@ -9,6 +9,18 @@
 #import "Ship.h"
 
 @implementation Ship
+- (Ship *)initWithShipName:(NSString *)shipName {
+  self = [super init];
+  if (self) {
+    self.shipName = shipName;
+    self.equipment1 = @"空";
+    self.equipment2 = @"空";
+    self.equipment3 = @"空";
+    self.equipment4 = @"空";
+    self.equipment5 = @"空";
+  }
+  return self;
+}
 
 - (Ship *)initWithFirebaseValue:(NSDictionary *)value {
   self = [super init];

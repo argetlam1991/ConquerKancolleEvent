@@ -43,6 +43,9 @@
                              }];
                            }];
 }
+- (IBAction)cancleTapped:(UIButton *)sender {
+  [self performSegueWithIdentifier:@"registertosignin" sender:nil];
+}
 
 /*
 #pragma mark - Navigation

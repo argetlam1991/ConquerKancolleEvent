@@ -88,6 +88,8 @@
   // Configure the cell...
   cell.indexPath = indexPath;
   [cell receiveShip:[self.guide getShipAtIndex:indexPath.section * 6 + indexPath.row]];
+  NSLog(@"indexPath %u %u", indexPath.section, indexPath.row);
+  NSLog(@"%@", [cell.ship description]);
   [cell updateView];
   return cell;
 }
@@ -98,7 +100,7 @@
    cell.ship = ship;
    [cell updateView];
    */
-  [self.guide setShip:ship AtIndex:indexPath.section * 6 +  indexPath.row];
+  [self.guide setShip:ship AtIndex:indexPath.section * 6 + indexPath.row];
   [self.tableView reloadData];
 }
 

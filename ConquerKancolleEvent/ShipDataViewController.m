@@ -37,7 +37,11 @@ const NSUInteger kHeaderSectionTag = 10000;
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
   ShipDataTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-  self.ship.shipName = cell.shipName;
+  if(!self.ship) {
+    self.ship = [[Ship alloc] initWithShipName:cell.shipName];
+  } else {
+    self.ship.shipName = cell.shipName;
+  }
   [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -50,7 +50,12 @@
 
 - (void) setShip:(Ship *)ship AtIndex:(NSUInteger)index {
   if (index < [self.fleet count]) {
-    self.fleet[index] = ship;
+    if (ship) {
+      self.fleet[index] = ship;
+    } else {
+      [self.fleet removeObjectAtIndex:index];
+    }
+    
   } else {
     [self.fleet addObject:ship];
   }

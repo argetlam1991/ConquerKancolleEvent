@@ -117,6 +117,7 @@ PODS:
   - GTMSessionFetcher/Full (1.1.11):
     - GTMSessionFetcher/Core (= 1.1.11)
   - Protobuf (3.3.0)
+  - SAMKeychain (1.5.2)
 
 DEPENDENCIES:
   - Firebase/AdMob
@@ -128,6 +129,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - SAMKeychain
 
 SPEC CHECKSUMS:
   Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
@@ -149,7 +151,8 @@ SPEC CHECKSUMS:
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
 
-PODFILE CHECKSUM: 2df073f60051549bdd0fb61982f7e20cbe477627
+PODFILE CHECKSUM: 1a35cf7548af8287393292dcf3bb569dd69e1857
 
 COCOAPODS: 1.2.0

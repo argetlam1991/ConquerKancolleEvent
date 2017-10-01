@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B4CCA38B31C10244B8F4CAD4BC5A3FCD'
+               BlueprintIdentifier = '8CECCF2EA3135B49FE106CB0E9BB7059'
                BlueprintName = 'Pods-ConquerKancolleEvent'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ConquerKancolleEvent.a'>

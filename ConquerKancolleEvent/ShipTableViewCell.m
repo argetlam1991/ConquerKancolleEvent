@@ -30,6 +30,14 @@
     self.equipment3Label.text = self.ship.equipment3;
     self.equipment4Label.text = self.ship.equipment4;
     self.equipment5Label.text = self.ship.equipment5;
+  } else {
+    self.shipNameLabel.text = @"空";
+    self.equipment1Label.text = @"空";
+    self.equipment2Label.text = @"空";
+    self.equipment3Label.text = @"空";
+    self.equipment4Label.text = @"空";
+    self.equipment5Label.text = @"空";
+    
   }
 }
 
