@@ -33,13 +33,13 @@
   UITableViewController *tableViewController = [[UITableViewController alloc] init];
   tableViewController.tableView = self.tableView;
   
-  //[[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
-  
   //refreshControl
   self.isLoading = NO;
   self.refreshControl = [[UIRefreshControl alloc] init];
   [self.refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
   tableViewController.refreshControl = self.refreshControl;
+  
+  
   [self initializeRefreshControl];
   
 }
@@ -76,7 +76,7 @@
 {
   UIActivityIndicatorView *indicatorFooter = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 44)];
   [indicatorFooter setColor:[UIColor blackColor]];
-  [indicatorFooter startAnimating];
+  [indicatorFooter hidesWhenStopped];
   [self.tableView setTableFooterView:indicatorFooter];
 }
 
@@ -84,6 +84,8 @@
   [self.tableView reloadData];
   [self.refreshControl endRefreshing];
   self.isLoading = NO;
+  UIActivityIndicatorView *indicatorFooter = (UIActivityIndicatorView *)self.tableView.tableFooterView;
+  [indicatorFooter stopAnimating];
 }
 
 
@@ -94,6 +96,8 @@
   if (!self.isLoading && scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height)
   {
     self.isLoading = YES;
+    UIActivityIndicatorView *indicatorFooter = (UIActivityIndicatorView *)self.tableView.tableFooterView;
+    [indicatorFooter startAnimating];
     [self.guides increaseCapacity];
     [self refreshTable];
   }
