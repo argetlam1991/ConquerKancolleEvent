@@ -16,12 +16,19 @@
         <scene sceneID="fIB-vh-3Vz">
             <objects>
                 <navigationController id="Kjl-ZS-It0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" misplaced="YES" backIndicatorImage="backImage" backIndicatorTransitionMaskImage="backImage" id="akQ-35-ijo">
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" misplaced="YES" id="akQ-35-ijo">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="WMf-22-eaF" kind="relationship" relationship="rootViewController" id="PT4-EV-Am8"/>
@@ -31,7 +38,7 @@
             </objects>
             <point key="canvasLocation" x="-45" y="777"/>
         </scene>
-        <!--Guides View Controller-->
+        <!--攻略-->
         <scene sceneID="OZr-TJ-isH">
             <objects>
                 <viewController id="WMf-22-eaF" customClass="GuidesViewController" sceneMemberID="viewController">
@@ -90,7 +97,7 @@
                                             <outlet property="authorLabel" destination="ha0-bt-vB5" id="nBG-Wc-szN"/>
                                             <outlet property="describtionLabel" destination="0il-Ja-J7I" id="KT6-65-lHq"/>
                                             <outlet property="titleLabel" destination="Foj-eQ-4jj" id="pfa-Vh-u3L"/>
-                                            <segue destination="5Ur-Oq-b7f" kind="show" id="6BI-Qb-4Ja"/>
+                                            <segue destination="5Ur-Oq-b7f" kind="show" id="1Ty-Df-xUc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,10 +115,10 @@
                             <constraint firstItem="BLn-pD-OjC" firstAttribute="leading" secondItem="ry1-Xv-mnr" secondAttribute="leading" id="rIp-JS-48b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dRr-gD-X7c">
+                    <navigationItem key="navigationItem" title="攻略" id="dRr-gD-X7c">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rna-dv-3hG">
                             <connections>
-                                <segue destination="5Ur-Oq-b7f" kind="show" id="Fhz-aY-5a3"/>
+                                <segue destination="5Ur-Oq-b7f" kind="show" id="yTq-ya-5aU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -219,89 +226,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Y3-mS-tg7">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Y3-mS-tg7">
+                                <rect key="frame" x="20" y="72" width="374" height="21"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-dY-TnQ">
-                                <rect key="frame" x="16" y="296" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="单舰队"/>
-                                    <segment title="水上打击部队"/>
-                                    <segment title="机动部队"/>
-                                    <segment title="运输部队"/>
-                                </segments>
-                                <connections>
-                                    <action selector="switchFleetKind:" destination="5Ur-Oq-b7f" eventType="valueChanged" id="Sho-3y-VuL"/>
-                                </connections>
-                            </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cf7-Tj-xHZ">
-                                <rect key="frame" x="16" y="110" width="343" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="攻略正文" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cf7-Tj-xHZ">
+                                <rect key="frame" x="20" y="101" width="374" height="210"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="209" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-xK-bhG">
-                                <rect key="frame" x="16" y="332" width="343" height="315"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="209" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-xK-bhG">
+                                <rect key="frame" x="20" y="355" width="374" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShipCellIdentifier" rowHeight="209" id="daP-0s-Grt" customClass="ShipTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="209"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="daP-0s-Grt" id="Slm-At-pNy">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="208.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="208.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="舰名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIh-Zw-SdT">
-                                                    <rect key="frame" x="8" y="94" width="35" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="舰名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIh-Zw-SdT">
+                                                    <rect key="frame" x="8" y="94" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="装备1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-O7-2or">
-                                                    <rect key="frame" x="293" y="8" width="43" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="装备1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-O7-2or">
+                                                    <rect key="frame" x="191" y="8" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="装备2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-fH-sxf">
-                                                    <rect key="frame" x="293" y="37" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="装备2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-fH-sxf">
+                                                    <rect key="frame" x="191" y="37" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="装备3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-5E-cfK">
-                                                    <rect key="frame" x="293" y="66" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="装备3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-5E-cfK">
+                                                    <rect key="frame" x="191" y="66" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="装备5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-93-12b">
-                                                    <rect key="frame" x="293" y="172" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="装备5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-93-12b">
+                                                    <rect key="frame" x="191" y="179.66666666666666" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="装备4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtT-QM-1uX">
-                                                    <rect key="frame" x="293" y="95" width="46" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="装备4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtT-QM-1uX">
+                                                    <rect key="frame" x="191" y="95" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                    <color key="textColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vnx-93-12b" secondAttribute="bottom" id="3MP-fB-N69"/>
+                                                <constraint firstItem="vIh-Zw-SdT" firstAttribute="leading" secondItem="Slm-At-pNy" secondAttribute="leadingMargin" id="7dG-0A-pXQ"/>
+                                                <constraint firstItem="aTd-5E-cfK" firstAttribute="top" secondItem="2hW-fH-sxf" secondAttribute="bottom" constant="8" symbolic="YES" id="B1r-MK-5R1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IcC-O7-2or" secondAttribute="trailing" id="Cam-WO-Yhi"/>
+                                                <constraint firstItem="xtT-QM-1uX" firstAttribute="top" secondItem="aTd-5E-cfK" secondAttribute="bottom" constant="8" symbolic="YES" id="FhT-YP-ztz"/>
+                                                <constraint firstItem="IcC-O7-2or" firstAttribute="width" secondItem="vIh-Zw-SdT" secondAttribute="width" id="HgY-dU-4vb"/>
+                                                <constraint firstItem="vIh-Zw-SdT" firstAttribute="centerY" secondItem="Slm-At-pNy" secondAttribute="centerY" id="LHF-XO-bZX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aTd-5E-cfK" secondAttribute="trailing" id="Npb-sz-Yre"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vnx-93-12b" secondAttribute="trailing" id="Owi-Ut-fKo"/>
+                                                <constraint firstItem="2hW-fH-sxf" firstAttribute="width" secondItem="IcC-O7-2or" secondAttribute="width" id="QHe-Z3-l4H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2hW-fH-sxf" secondAttribute="trailing" id="Rit-XG-iXS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xtT-QM-1uX" secondAttribute="trailing" id="Wzm-oJ-s61"/>
+                                                <constraint firstItem="IcC-O7-2or" firstAttribute="top" secondItem="Slm-At-pNy" secondAttribute="topMargin" id="cna-Ei-kjj"/>
+                                                <constraint firstItem="vnx-93-12b" firstAttribute="width" secondItem="IcC-O7-2or" secondAttribute="width" id="mQ6-XE-csV"/>
+                                                <constraint firstItem="2hW-fH-sxf" firstAttribute="top" secondItem="IcC-O7-2or" secondAttribute="bottom" constant="8" symbolic="YES" id="uGK-cB-jrg"/>
+                                                <constraint firstItem="aTd-5E-cfK" firstAttribute="width" secondItem="IcC-O7-2or" secondAttribute="width" id="uQE-II-uDK"/>
+                                                <constraint firstItem="xtT-QM-1uX" firstAttribute="width" secondItem="IcC-O7-2or" secondAttribute="width" id="v26-JK-r1V"/>
+                                                <constraint firstItem="xtT-QM-1uX" firstAttribute="leading" secondItem="vIh-Zw-SdT" secondAttribute="trailing" constant="8" symbolic="YES" id="wvQ-Ga-75v"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="equipment1Label" destination="IcC-O7-2or" id="ZMd-Vb-Nlq"/>
@@ -319,10 +323,42 @@
                                     <outlet property="delegate" destination="5Ur-Oq-b7f" id="QAL-mH-MfX"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iFG-dY-TnQ">
+                                <rect key="frame" x="20" y="319" width="374" height="29"/>
+                                <segments>
+                                    <segment title="单舰队"/>
+                                    <segment title="水上打击部队"/>
+                                    <segment title="机动部队"/>
+                                    <segment title="运输部队"/>
+                                </segments>
+                                <color key="tintColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchFleetKind:" destination="5Ur-Oq-b7f" eventType="valueChanged" id="Sho-3y-VuL"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iFG-dY-TnQ" firstAttribute="leading" secondItem="cue-GK-djr" secondAttribute="leading" constant="20" symbolic="YES" id="0gc-uT-rrr"/>
+                            <constraint firstAttribute="trailing" secondItem="Cf7-Tj-xHZ" secondAttribute="trailing" constant="20" symbolic="YES" id="12R-Qz-K2P"/>
+                            <constraint firstAttribute="trailing" secondItem="b8r-xK-bhG" secondAttribute="trailing" constant="20" symbolic="YES" id="2jR-4A-Aq9"/>
+                            <constraint firstItem="b8r-xK-bhG" firstAttribute="top" secondItem="iFG-dY-TnQ" secondAttribute="bottom" constant="8" symbolic="YES" id="HYB-w4-75M"/>
+                            <constraint firstItem="iFG-dY-TnQ" firstAttribute="top" secondItem="Cf7-Tj-xHZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Lrt-qh-NWP"/>
+                            <constraint firstItem="b8r-xK-bhG" firstAttribute="leading" secondItem="cue-GK-djr" secondAttribute="leadingMargin" id="M83-XC-FjW"/>
+                            <constraint firstAttribute="trailing" secondItem="iFG-dY-TnQ" secondAttribute="trailing" constant="20" symbolic="YES" id="MLX-0l-3Fg"/>
+                            <constraint firstAttribute="bottom" secondItem="b8r-xK-bhG" secondAttribute="bottom" id="Sle-GU-vLi"/>
+                            <constraint firstItem="Cf7-Tj-xHZ" firstAttribute="leading" secondItem="cue-GK-djr" secondAttribute="leading" constant="20" symbolic="YES" id="TTS-h7-bBd"/>
+                            <constraint firstItem="Cf7-Tj-xHZ" firstAttribute="height" secondItem="8Y3-mS-tg7" secondAttribute="height" multiplier="10" id="XW0-Qp-FlK"/>
+                            <constraint firstItem="Cf7-Tj-xHZ" firstAttribute="top" secondItem="8Y3-mS-tg7" secondAttribute="bottom" constant="8" symbolic="YES" id="gSN-zr-7kH"/>
+                            <constraint firstItem="8Y3-mS-tg7" firstAttribute="top" secondItem="Isl-yg-47w" secondAttribute="bottom" constant="8" symbolic="YES" id="geF-JO-TcR"/>
+                            <constraint firstAttribute="trailing" secondItem="8Y3-mS-tg7" secondAttribute="trailing" constant="20" symbolic="YES" id="oJr-Zd-Fd8"/>
+                            <constraint firstItem="8Y3-mS-tg7" firstAttribute="leading" secondItem="cue-GK-djr" secondAttribute="leading" constant="20" symbolic="YES" id="pR0-w4-kd2"/>
+                            <constraint firstItem="b8r-xK-bhG" firstAttribute="trailing" secondItem="cue-GK-djr" secondAttribute="trailingMargin" id="rKl-sF-mcc"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="攻略" id="xR2-OR-bMj"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="攻略" id="w5E-L9-Bmh"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="Cf7-Tj-xHZ" id="MJ4-5N-55W"/>
                         <outlet property="fleetKindSegmentedControl" destination="iFG-dY-TnQ" id="Zw4-6q-3IA"/>
@@ -332,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAG-Pj-Uev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.8" y="697.60119940029995"/>
+            <point key="canvasLocation" x="1574" y="777"/>
         </scene>
         <!--Ship Editor View Controller-->
         <scene sceneID="xZm-FE-AfU">
@@ -441,7 +477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oae-Ia-nsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279.7101449275365" y="697.01086956521749"/>
+            <point key="canvasLocation" x="2388" y="777"/>
         </scene>
         <!--Ship Data View Controller-->
         <scene sceneID="RP4-nH-XDE">
@@ -641,10 +677,7 @@
             <point key="canvasLocation" x="257" y="38"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="backImage" width="960" height="720"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6BI-Qb-4Ja"/>
+        <segue reference="yTq-ya-5aU"/>
     </inferredMetricsTieBreakers>
 </document>
