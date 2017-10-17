@@ -8,13 +8,17 @@
 
 #import "DataModel.h"
 
+
 @interface DataModel()
+
 @property (strong, nonatomic) NSDictionary *data;
 @property (strong, nonatomic) NSArray *kinds;
+
 @end
 
 
 @implementation DataModel
+
 - (DataModel *)initWithDataFile:(NSString *)filename {
   self = [super init];
   if (self) {
@@ -57,6 +61,5 @@
   NSArray *dataArray = self.data[kind];
   return dataArray[index];
 }
-
 
 @end

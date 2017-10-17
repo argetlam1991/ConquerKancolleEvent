@@ -8,7 +8,9 @@
 
 #import "DataModel.h"
 
+
 @interface EquipmentData : DataModel
+
 - (EquipmentData *)init;
 - (NSUInteger) getEquipmentKindsCount;
 - (NSString *) getEquipmentKindeAtIndex: (NSUInteger) index;

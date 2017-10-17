@@ -12,6 +12,7 @@
 
 
 @interface Guides : NSObject
+
 @property (weak, nonatomic) id<GuidesDelegate> delegate;
 
 - (void) addGuide:(Guide *) guide;
@@ -20,4 +21,5 @@
 - (NSUInteger) getGuidesCount;
 - (Guide *) getGuideAtIndex:(NSUInteger)index;
 - (void) increaseCapacity;
+
 @end

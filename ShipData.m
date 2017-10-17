@@ -8,8 +8,6 @@
 
 #import "ShipData.h"
 
-@interface ShipData()
-@end
 
 @implementation ShipData
 

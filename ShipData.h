@@ -8,7 +8,9 @@
 
 #import "DataModel.h"
 
+
 @interface ShipData : DataModel
+
 - (ShipData *)init;
 - (NSUInteger) getShipKindsCount;
 - (NSString *) getShipKindeAtIndex: (NSUInteger) index;

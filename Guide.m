@@ -9,7 +9,9 @@
 #import "Guide.h"
 @import Firebase;
 
+
 @implementation Guide
+
 - (Guide *) initWithEmptyFleet {
   self = [super init];
   if (self) {
@@ -19,6 +21,7 @@
   }
   return self;
 }
+
 - (Guide *) initWithFirebaseValue:(NSDictionary *)value withID:(NSString *)ID{
   self = [super init];
   if (self) {
@@ -35,7 +38,6 @@
   return self;
 }
 
-
 - (NSDictionary *) convertToFirebaseValue {
   NSMutableArray *fleetArray = [[NSMutableArray alloc] init];
   for (Ship *ship in self.fleet) {
@@ -49,7 +51,6 @@
                           };
   return value;
 }
-
 
 - (void) setShip:(Ship *)ship AtIndex:(NSUInteger)index {
   if (index < [self.fleet count]) {
@@ -71,6 +72,5 @@
     return nil;
   }
 }
-
 
 @end

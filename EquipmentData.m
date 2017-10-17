@@ -8,7 +8,9 @@
 
 #import "EquipmentData.h"
 
+
 @implementation EquipmentData
+
 - (EquipmentData *)init {
   self = [super initWithDataFile:@"conquerkancolleevent-equipments"];
   return self;

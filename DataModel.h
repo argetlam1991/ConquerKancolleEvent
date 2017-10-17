@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface DataModel : NSObject
+
 - (DataModel *)initWithDataFile:(NSString *)filename;
 - (NSUInteger) getDataKindsCount;
 - (NSString *) getDataKindeAtIndex: (NSUInteger) index;
