@@ -9,15 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "Ship.h"
 
+
 @interface Guide : NSObject
+
 @property (strong, nonatomic) NSString *guideID;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *guideDescription;
 @property (strong, nonatomic) NSMutableArray *fleet;
 @property (strong, nonatomic) NSString *authorName;
+@property (strong, nonatomic) NSString *authorId;
+
 - (Guide *) initWithEmptyFleet;
 - (Guide *) initWithFirebaseValue:(NSDictionary *)value withID:(NSString *)ID;
 - (void) setShip:(Ship *) ship AtIndex:(NSUInteger) index;
 - (Ship *) getShipAtIndex:(NSUInteger) index;
 - (NSDictionary *) convertToFirebaseValue;
+
 @end

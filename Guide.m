@@ -15,6 +15,7 @@
   if (self) {
     self.fleet = [NSMutableArray arrayWithCapacity:12];
     self.authorName =[FIRAuth auth].currentUser.displayName;
+    self.authorId = [FIRAuth auth].currentUser.uid;
   }
   return self;
 }
@@ -24,6 +25,7 @@
     self.guideID = ID;
     self.title = value[@"title"];
     self.authorName = value[@"author"];
+    self.authorId = value[@"authorId"];
     self.guideDescription = value[@"description"];
     self.fleet = [NSMutableArray arrayWithCapacity:12];
     for (NSDictionary *shipValue in value[@"fleet"]) {
@@ -43,6 +45,7 @@
                           @"description": self.guideDescription,
                           @"fleet": (NSArray *)[fleetArray copy],
                           @"author": self.authorName,
+                          @"authorId": self.authorId
                           };
   return value;
 }

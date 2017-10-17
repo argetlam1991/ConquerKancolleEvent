@@ -65,6 +65,9 @@
 }
 
 - (void) addGuide:(Guide *) guide {
+  if (![guide.authorId isEqualToString:[FIRAuth auth].currentUser.uid]) {
+    return;
+  }
   if(guide.guideID) {
     [[[_ref child:@"guides"] child:guide.guideID] removeValue];
   }

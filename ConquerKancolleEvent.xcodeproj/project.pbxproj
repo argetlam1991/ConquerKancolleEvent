@@ -29,8 +29,8 @@
 		484D9D061F7F3D9F00C5634B /* EquipmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D9D051F7F3D9F00C5634B /* EquipmentData.m */; };
 		484D9D0D1F7F40A500C5634B /* EquipmentDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D9D0C1F7F40A500C5634B /* EquipmentDataViewController.m */; };
 		484D9D101F7F40D900C5634B /* EquipmentDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D9D0F1F7F40D900C5634B /* EquipmentDataTableViewCell.m */; };
-		484D9D121F7F4A2700C5634B /* conquerkancolleevent-equipments.json in Resources */ = {isa = PBXBuildFile; fileRef = 484D9D111F7F4A2700C5634B /* conquerkancolleevent-equipments.json */; };
 		484D9D171F819A8D00C5634B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484D9D161F819A8D00C5634B /* Security.framework */; };
+		487FE2101F92A4BA00CEFDC7 /* conquerkancolleevent-equipments.json in Resources */ = {isa = PBXBuildFile; fileRef = 487FE20F1F92A0E400CEFDC7 /* conquerkancolleevent-equipments.json */; };
 		48A5C1931F6A29710018FB28 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A5C1921F6A29710018FB28 /* RegisterViewController.m */; };
 		48A5C1961F74C22B0018FB28 /* ShipData.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A5C1951F74C22B0018FB28 /* ShipData.m */; };
 		48A5C19F1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 48A5C19E1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json */; };
@@ -80,8 +80,8 @@
 		484D9D0C1F7F40A500C5634B /* EquipmentDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EquipmentDataViewController.m; sourceTree = "<group>"; };
 		484D9D0E1F7F40D900C5634B /* EquipmentDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquipmentDataTableViewCell.h; sourceTree = "<group>"; };
 		484D9D0F1F7F40D900C5634B /* EquipmentDataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EquipmentDataTableViewCell.m; sourceTree = "<group>"; };
-		484D9D111F7F4A2700C5634B /* conquerkancolleevent-equipments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "conquerkancolleevent-equipments.json"; path = "ConquerKancolleEvent/conquerkancolleevent-equipments.json"; sourceTree = SOURCE_ROOT; };
 		484D9D161F819A8D00C5634B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		487FE20F1F92A0E400CEFDC7 /* conquerkancolleevent-equipments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "conquerkancolleevent-equipments.json"; sourceTree = "<group>"; };
 		48A5C1911F6A29710018FB28 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		48A5C1921F6A29710018FB28 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		48A5C1941F74C22B0018FB28 /* ShipData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipData.h; sourceTree = "<group>"; };
@@ -167,8 +167,8 @@
 		484BA1321F4532FC00C70AA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				484D9D111F7F4A2700C5634B /* conquerkancolleevent-equipments.json */,
 				484BA1331F4532FC00C70AA3 /* main.m */,
+				487FE20F1F92A0E400CEFDC7 /* conquerkancolleevent-equipments.json */,
 				48A5C19E1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json */,
 			);
 			name = "Supporting Files";
@@ -278,7 +278,7 @@
 			files = (
 				484BA1421F4532FC00C70AA3 /* LaunchScreen.storyboard in Resources */,
 				48A5C19F1F7706DB0018FB28 /* conquerkancolleevent-shipsData.json in Resources */,
-				484D9D121F7F4A2700C5634B /* conquerkancolleevent-equipments.json in Resources */,
+				487FE2101F92A4BA00CEFDC7 /* conquerkancolleevent-equipments.json in Resources */,
 				484BA14A1F45350F00C70AA3 /* GoogleService-Info.plist in Resources */,
 				484BA13F1F4532FC00C70AA3 /* Assets.xcassets in Resources */,
 				484BA13D1F4532FC00C70AA3 /* Main.storyboard in Resources */,

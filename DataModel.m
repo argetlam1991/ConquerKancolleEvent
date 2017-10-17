@@ -35,7 +35,6 @@
   //Add spectial "空" as null value
   mutableData[@"空"] = @[@"空"];
   self.data = [NSDictionary dictionaryWithDictionary:mutableData];
-  
   NSMutableArray *mutableKinds = [NSMutableArray arrayWithArray:self.kinds];
   [mutableKinds insertObject:@"空" atIndex:0];
   self.kinds = [NSArray arrayWithArray:mutableKinds];

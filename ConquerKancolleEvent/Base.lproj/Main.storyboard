@@ -36,7 +36,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnV-B6-Bsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="777"/>
+            <point key="canvasLocation" x="-94" y="952"/>
         </scene>
         <!--攻略-->
         <scene sceneID="OZr-TJ-isH">
@@ -382,9 +382,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Aq-yH-HPs">
-                                <rect key="frame" x="20" y="142" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Aq-yH-HPs">
+                                <rect key="frame" x="28" y="134" width="358.33333333333331" height="44"/>
                                 <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="舰名">
@@ -395,9 +394,8 @@
                                     <action selector="shipNameButtonTapped:" destination="1mS-n2-kTm" eventType="touchUpInside" id="o1l-sU-QZ6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-dd-vXH">
-                                <rect key="frame" x="20" y="250" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-dd-vXH">
+                                <rect key="frame" x="28" y="248" width="358.33333333333331" height="44"/>
                                 <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -408,9 +406,8 @@
                                     <action selector="equipment1ButtonTapped:" destination="1mS-n2-kTm" eventType="touchUpInside" id="Zzh-PQ-8bK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgq-R1-eUB">
-                                <rect key="frame" x="20" y="323" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgq-R1-eUB">
+                                <rect key="frame" x="28" y="300" width="358.33333333333331" height="44"/>
                                 <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="装备2">
@@ -421,9 +418,8 @@
                                     <action selector="equipment2ButtonTapped:" destination="1mS-n2-kTm" eventType="touchUpInside" id="SD5-Kj-4S7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwH-yR-y62">
-                                <rect key="frame" x="20" y="396" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwH-yR-y62">
+                                <rect key="frame" x="28" y="352" width="358.33333333333331" height="44"/>
                                 <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="装备3">
@@ -434,9 +430,8 @@
                                     <action selector="equipment3ButtonTapped:" destination="1mS-n2-kTm" eventType="touchUpInside" id="lws-ti-gpk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPF-VK-Fvg">
-                                <rect key="frame" x="20" y="469" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPF-VK-Fvg">
+                                <rect key="frame" x="28" y="404" width="358.33333333333331" height="44"/>
                                 <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="装备4">
@@ -447,9 +442,8 @@
                                     <action selector="equipment4ButtonTapped:" destination="1mS-n2-kTm" eventType="touchUpInside" id="usN-S6-cxb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-Ec-Gju">
-                                <rect key="frame" x="20" y="573" width="374" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnQ-Ec-Gju">
+                                <rect key="frame" x="28" y="598" width="358.33333333333331" height="44"/>
                                 <color key="backgroundColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -462,6 +456,28 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1870601177" green="0.74899250269999995" blue="0.82140535120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n4i-HW-RiV" firstAttribute="top" secondItem="ZnQ-Ec-Gju" secondAttribute="bottom" constant="50" id="39U-JI-8mM"/>
+                            <constraint firstItem="8Aq-yH-HPs" firstAttribute="leading" secondItem="Ia7-KS-Bry" secondAttribute="leadingMargin" constant="8" id="5p3-hc-Dwo"/>
+                            <constraint firstItem="ZnQ-Ec-Gju" firstAttribute="width" secondItem="8Aq-yH-HPs" secondAttribute="width" id="939-bw-UED"/>
+                            <constraint firstItem="Omq-dd-vXH" firstAttribute="top" secondItem="8Aq-yH-HPs" secondAttribute="bottom" constant="70" id="DOK-pp-Mfc"/>
+                            <constraint firstItem="wPF-VK-Fvg" firstAttribute="centerX" secondItem="Ia7-KS-Bry" secondAttribute="centerX" id="GK6-j0-obx"/>
+                            <constraint firstItem="ZnQ-Ec-Gju" firstAttribute="centerX" secondItem="Ia7-KS-Bry" secondAttribute="centerX" id="HE8-5h-2Ye"/>
+                            <constraint firstItem="wPF-VK-Fvg" firstAttribute="top" secondItem="gwH-yR-y62" secondAttribute="bottom" constant="8" symbolic="YES" id="Iiu-2k-8tI"/>
+                            <constraint firstItem="gwH-yR-y62" firstAttribute="top" secondItem="Jgq-R1-eUB" secondAttribute="bottom" constant="8" symbolic="YES" id="OTI-86-g0d"/>
+                            <constraint firstItem="Jgq-R1-eUB" firstAttribute="width" secondItem="8Aq-yH-HPs" secondAttribute="width" id="QVX-1U-QSy"/>
+                            <constraint firstItem="wPF-VK-Fvg" firstAttribute="width" secondItem="8Aq-yH-HPs" secondAttribute="width" id="R61-H9-FpV"/>
+                            <constraint firstItem="gwH-yR-y62" firstAttribute="centerX" secondItem="Ia7-KS-Bry" secondAttribute="centerX" id="f20-Ef-7ud"/>
+                            <constraint firstItem="8Aq-yH-HPs" firstAttribute="centerX" secondItem="Ia7-KS-Bry" secondAttribute="centerX" id="fHw-By-imF"/>
+                            <constraint firstItem="Omq-dd-vXH" firstAttribute="width" secondItem="8Aq-yH-HPs" secondAttribute="width" id="m07-cZ-Xc3"/>
+                            <constraint firstItem="Omq-dd-vXH" firstAttribute="centerX" secondItem="Ia7-KS-Bry" secondAttribute="centerX" id="nhn-K8-4ui"/>
+                            <constraint firstItem="8Aq-yH-HPs" firstAttribute="top" secondItem="eDe-lZ-Huh" secondAttribute="bottom" constant="70" id="rY3-IN-JtZ"/>
+                            <constraint firstItem="Jgq-R1-eUB" firstAttribute="top" secondItem="Omq-dd-vXH" secondAttribute="bottom" constant="8" symbolic="YES" id="wI8-Zz-YvK"/>
+                            <constraint firstItem="gwH-yR-y62" firstAttribute="width" secondItem="8Aq-yH-HPs" secondAttribute="width" id="wO4-Ee-xYO"/>
+                            <constraint firstItem="Jgq-R1-eUB" firstAttribute="centerX" secondItem="Ia7-KS-Bry" secondAttribute="centerX" id="zrT-tv-xu2"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Equipment1Button" destination="Omq-dd-vXH" id="vvd-je-Ee9"/>

@@ -8,7 +8,9 @@
 
 #import "Ship.h"
 
+
 @implementation Ship
+
 - (Ship *)initWithShipName:(NSString *)shipName {
   self = [super init];
   if (self) {
@@ -46,5 +48,4 @@
                           };
   return value;
 }
-
 @end

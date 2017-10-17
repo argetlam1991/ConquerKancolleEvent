@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Ship : NSObject
+
 @property (strong, nonatomic) NSString *shipName;
 @property (strong, nonatomic) NSString *equipment1;
 @property (strong, nonatomic) NSString *equipment2;
@@ -19,4 +21,5 @@
 - (NSDictionary *)convertToFirebaseValue;
 - (Ship *)initWithShipName:(NSString *) shipName;
 - (Ship *)initWithFirebaseValue:(NSDictionary *)value;
+
 @end
